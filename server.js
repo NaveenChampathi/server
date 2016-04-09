@@ -115,11 +115,11 @@ db.on('error', function(error){
 db.on('disconnected', connect);
 
 app.get('/', function(req, res) {
-    db.names.find({}).exec(function(err, names) {
-        res.header("Content-Type:","text/json");
-        res.end(JSON.stringify(names));
-    });
-    // res.send('Hey Naveen!');
+    // db.names.find({}).exec(function(err, names) {
+    //     res.header("Content-Type:","text/json");
+    //     res.end(JSON.stringify(names));
+    // });
+    res.send('Hey Naveen!');
 });
 
 app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, process.env.OPENSHIFT_NODEJS_IP, function() {
