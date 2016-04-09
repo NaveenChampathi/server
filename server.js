@@ -122,7 +122,7 @@ app.get('/', function(req, res) {
     //res.send('Hey Naveen!');
 });
 
-app.listen(parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080, process.env.OPENSHIFT_NODEJS_IP, function() {
+app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, process.env.OPENSHIFT_NODEJS_IP, function() {
     console.log('Listening on 3000');
 });
 
