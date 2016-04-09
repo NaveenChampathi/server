@@ -119,7 +119,7 @@ app.get('/', function(req, res) {
         res.header("Content-Type:","text/json");
         res.end(JSON.stringify(names));
     });
-    //res.send('Hey Naveen!');
+    // res.send('Hey Naveen!');
 });
 
 app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, process.env.OPENSHIFT_NODEJS_IP, function() {
